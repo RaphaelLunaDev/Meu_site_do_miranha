@@ -1,0 +1,18 @@
+
+.hero {
+    padding-top: 165px;
+    min-height: 100vh; //80% da area visivel
+    background-image: url(../images/fundo_miranha.jpg);
+    background-size: cover; // ira tentar fazer a imagem ocupar todo o container respeitando a proporção da
+    margin-top: -96px;
+    &__logo {
+        width: 500px;
+        height: 100%;
+    }
+
+    &__container {
+        padding: 8px 36px;
+        display: flex;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,112 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #15212a;
+  transition: 0.5s ease;
+  z-index: 1;
+  background-color: transparent;
+}
+.header--is-hidden {
+  background-color: transparent;
+  transition: 0.5s ease;
+}
+.header--is-hidden .header__logo {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease;
+}
+.header--is-hidden .header__itens:first-child {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease;
+}
+.header__container {
+  padding: 8px 36px;
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+  max-width: 150px;
+  width: 100%;
+  padding-top: 7px;
+}
+.header__itens {
+  display: flex;
+}
+.header__itens__button {
+  padding-left: 50px;
+  padding-top: 7px;
+}
+.header__itens__icon {
+  padding: 30px;
+}
+.header__itens__icon a {
+  font-size: 17px;
+  color: #fff;
+}
+
+.hero {
+  padding-top: 165px;
+  min-height: 100vh;
+  background-image: url(../images/fundo_miranha.jpg);
+  background-size: cover;
+  margin-top: -96px;
+}
+.hero__logo {
+  width: 500px;
+  height: 100%;
+}
+.hero__container {
+  padding: 8px 36px;
+  display: flex;
+  justify-content: space-between;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Avenir, sans-serif;
+  list-style: none;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  font-size: 18px;
+  color: #f9f9f9;
+  background-color: red;
+  text-transform: uppercase;
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 8px 14px;
+  letter-spacing: 1px;
+  border: 1px solid red;
+}
+.button:hover {
+  background-color: red, 3%;
+}
+.button--secondary {
+  background-color: #bf2e22;
+  border: 1px solid #bf2e22;
+}
+.button--secondary:hover {
+  background-color: rgb(203.988, 49.128, 36.312);
+}
+.button--dark {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid #f9f9f9;
+}
+.button--dark:hover {
+  background-color: #f9f9f9;
+  color: #15212a;
+}
+
+.test {
+  background-color: black;
+  height: 60000px;
+}
