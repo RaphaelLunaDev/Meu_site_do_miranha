@@ -10,9 +10,10 @@
     margin-bottom: 100px;
 
     @media (max-width:768px) {
-            background-image: url(../images/fundo_miranha.jpg);
-            padding-top: 55vw;      //por causa que o logo ficou em cima do hero
-            background-size: contain;   //vai adaptar o tamanho da imagem de fundo
+            padding-left: 0px;
+            background-image: url(../images/miles-phone.jpeg);
+            padding-top: 55px;      //por causa que o logo ficou em cima do hero
+            background-size: cover;   //vai adaptar o tamanho da imagem de fundo
             background-repeat: no-repeat;   //por algum motivo o background repetiu e esse comando tirou
             margin-top: -55px;      //de vez de dar o espaçamento, ele tira (meio obvio mas fds)    
         }
@@ -21,6 +22,11 @@
         width: 500px;
         height: 100%;
         padding-bottom: 30px;
+
+        @media (max-width:768px) {
+            max-width: 350px;
+            padding-left: 20px;
+        }
     }
 
     &__container {
@@ -28,7 +34,7 @@
         display: flex;
         justify-content: space-between;
 
-        
+    
     }
 
     &__oscar {
@@ -41,16 +47,27 @@
 
     &__info {
         display: flex;
+
+        @media (max-width:768px) {
+            display: flex
+        }
         
         &__item {
-            color: #999;;
+            color: #999;
             padding: 0 13px;
 
+            @media (max-width:768px) {
+            padding: 0 7px;
+            display: flex;
+        }
         
         } 
         img {
             height: 30px;
+            
         }
+
+        
     }
 
     &__text{
@@ -60,6 +77,10 @@
         margin-top: 20px;
         padding: 20px;
         border-radius: 40px;
+
+        @media (max-width:768px) {
+            font-size: 19px;
+        }
     }
 
     &__buttons{
@@ -67,7 +88,11 @@
         display: flex;
         column-gap: 20px;
 
-
+        @media (max-width:768px) {
+            padding-top: 35px;
+            column-gap: 5px;
+            display: block;
+        }
         .button--one {
     display: flex;
     align-items: center;
@@ -89,6 +114,11 @@
             cursor: pointer;
             color: red;
             transition: .5s;
+        }
+
+        @media (max-width:768px) {
+            margin-left: 5px;
+            margin-bottom: 25px;
         }
     }
 
@@ -113,6 +143,12 @@
             cursor: pointer;
             color: red;
             transition: .5s;
+        }
+
+        @media (max-width:768px) {
+            margin-left: 5px;
+            margin-bottom: 25px;
+            width: 150px;
         }
 }
 

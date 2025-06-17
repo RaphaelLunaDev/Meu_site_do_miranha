@@ -92,9 +92,10 @@
 }
 @media (max-width: 768px) {
   .hero {
-    background-image: url(../images/fundo_miranha.jpg);
-    padding-top: 55vw;
-    background-size: contain;
+    padding-left: 0px;
+    background-image: url(../images/miles-phone.jpeg);
+    padding-top: 55px;
+    background-size: cover;
     background-repeat: no-repeat;
     margin-top: -55px;
   }
@@ -103,6 +104,12 @@
   width: 500px;
   height: 100%;
   padding-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .hero__logo {
+    max-width: 350px;
+    padding-left: 20px;
+  }
 }
 .hero__container {
   padding: 8px;
@@ -119,9 +126,20 @@
 .hero__info {
   display: flex;
 }
+@media (max-width: 768px) {
+  .hero__info {
+    display: flex;
+  }
+}
 .hero__info__item {
   color: #999;
   padding: 0 13px;
+}
+@media (max-width: 768px) {
+  .hero__info__item {
+    padding: 0 7px;
+    display: flex;
+  }
 }
 .hero__info img {
   height: 30px;
@@ -134,10 +152,22 @@
   padding: 20px;
   border-radius: 40px;
 }
+@media (max-width: 768px) {
+  .hero__text {
+    font-size: 19px;
+  }
+}
 .hero__buttons {
   padding-top: 40px;
   display: flex;
   column-gap: 20px;
+}
+@media (max-width: 768px) {
+  .hero__buttons {
+    padding-top: 35px;
+    column-gap: 5px;
+    display: block;
+  }
 }
 .hero__buttons .button--one {
   display: flex;
@@ -161,6 +191,12 @@
   color: red;
   transition: 0.5s;
 }
+@media (max-width: 768px) {
+  .hero__buttons .button--one {
+    margin-left: 5px;
+    margin-bottom: 25px;
+  }
+}
 .hero__buttons .button--tow {
   display: flex;
   align-items: center;
@@ -182,6 +218,13 @@
   cursor: pointer;
   color: red;
   transition: 0.5s;
+}
+@media (max-width: 768px) {
+  .hero__buttons .button--tow {
+    margin-left: 5px;
+    margin-bottom: 25px;
+    width: 150px;
+  }
 }
 .hero__buttons .button--tow-radial {
   justify-content: center;
@@ -227,6 +270,12 @@
 .shows__list__item img {
   width: 100%;
   border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .shows__list__item img {
+    width: 100%;
+    height: 100%;
+  }
 }
 .shows__tabs {
   background-color: black;

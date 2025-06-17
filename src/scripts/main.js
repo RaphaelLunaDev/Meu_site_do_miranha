@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function(){ //evento de ira funcio
     const alturaHero = heroSection.clientHeight;     //aqui ele ira ver a altura do hero para saber quando a rolagem passou
 
 
+
+
     window.addEventListener("scroll", function () {
         if (window.scrollY >= 20) {
             ocutaElementosDoHeader();
@@ -60,11 +62,4 @@ function escondeTodasAbas() {
     for (let i = 0; i < tabsContainer.length; i++ ) {
         tabsContainer[i].classList.remove('shows__list--is-active');
     }
-
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.header__nav');
-
-    menuToggle.addEventListener('click', () => {
-        nav.classList.toggle('active');
-    });
 }
