@@ -8,9 +8,9 @@
     transition: .5s ease;
     z-index: 1;     //meio que camadas (essa vasi ficar por cima de tudo)   (inclusive do rei leao que ta em position absolute)
     background-color: transparent;
-        &--is-hidden {
-        background-color: transparent;  //quando tiver em cima do hero
-        transition: .5s ease;
+    &--is-hidden {
+    background-color: transparent;  //quando tiver em cima do hero
+    transition: .5s ease;
 
         .header__logo {
             opacity: 0;      //quando tiver em cima do hero
@@ -22,6 +22,7 @@
         opacity: 0;     //quando tiver em cima do hero
         visibility: hidden;
         transition: .5s ease;
+        
         }
     }
 
@@ -35,6 +36,10 @@
             max-width: 150px;
             width: 100%;
             padding-top: 7px; 
+
+            @media (max-width:768px) {
+            max-width: 64px;
+        }
         }
     
     &__itens {
@@ -43,7 +48,8 @@
 
         &__button{
         padding-left: 50px;
-        padding-top: 7px; 
+        padding-top: 7px;
+
     }
 
         &__icon {
@@ -55,5 +61,41 @@
             }
         }
     }
+
+    /* Hamburger button */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+}
+
+    @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .header__nav {
+        display: none;
+        width: 100%;
+    }
+
+    .header__nav.active {
+        display: block;
+    }
+
+    .header__itens {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 0;
+    }
+
+    .header__itens__icon a,
+    .header__itens__button a {
+        font-size: 1rem;
+        width: 100%;
+    }
+}
 
 }

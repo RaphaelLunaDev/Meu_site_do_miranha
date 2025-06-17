@@ -1,18 +1,139 @@
+@use 'variaveis';
 
 .hero {
-    padding-top: 165px;
+    padding-top: 100px;
+    padding-left: 36px;
     min-height: 100vh; //80% da area visivel
     background-image: url(../images/fundo_miranha.jpg);
     background-size: cover; // ira tentar fazer a imagem ocupar todo o container respeitando a proporção da
     margin-top: -96px;
+    margin-bottom: 100px;
+
+    @media (max-width:768px) {
+            background-image: url(../images/fundo_miranha.jpg);
+            padding-top: 55vw;      //por causa que o logo ficou em cima do hero
+            background-size: contain;   //vai adaptar o tamanho da imagem de fundo
+            background-repeat: no-repeat;   //por algum motivo o background repetiu e esse comando tirou
+            margin-top: -55px;      //de vez de dar o espaçamento, ele tira (meio obvio mas fds)    
+        }
+    
     &__logo {
         width: 500px;
         height: 100%;
+        padding-bottom: 30px;
     }
 
     &__container {
-        padding: 8px 36px;
+        padding: 8px;
         display: flex;
         justify-content: space-between;
+
+        
+    }
+
+    &__oscar {
+        padding-left: 20px;
+        font-weight: bold;
+        font-size: 20px;
+        color: #37f1a3; 
+        padding-bottom: 20px;
+    }
+
+    &__info {
+        display: flex;
+        
+        &__item {
+            color: #999;;
+            padding: 0 13px;
+
+        
+        } 
+        img {
+            height: 30px;
+        }
+    }
+
+    &__text{
+        max-width: 510px;
+        color: rgb(255, 255, 255);
+        font-size: 22px;
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 40px;
+    }
+
+    &__buttons{
+        padding-top: 40px;
+        display: flex;
+        column-gap: 20px;
+
+
+        .button--one {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding: 2px 24px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.1s linear;
+    height: 56px;
+    background-color: #FFFFFF;
+    color: #000;
+
+        &:hover {
+            background-color: black;
+            cursor: pointer;
+            color: red;
+            transition: .5s;
+        }
+    }
+
+        .button--tow {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding: 2px 24px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.1s linear;
+    height: 56px;
+    background-color: #4c484c;
+    color: #FFFFFF;
+
+    &:hover {
+            background-color: black;
+            cursor: pointer;
+            color: red;
+            transition: .5s;
+        }
+}
+
+    .button--tow-radial {
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    padding: 0;
+    }
+
+    .button--tow-radial .hero__buttons__icon {
+    width: 28px;
+    font-size: 28px;
+    color: #FFFFFF;
+    }
+
+    .hero__buttons__aditional {
+    display: flex;
+    column-gap: 20px;
+}
     }
 }

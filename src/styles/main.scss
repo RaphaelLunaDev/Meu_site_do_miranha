@@ -1,13 +1,19 @@
 @use 'header';
 @use 'variaveis';
 @use 'hero';
+@use 'shows';
+@use 'footer';
 
+body {
+    background-color: black;
+}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Avenir, sans-serif;
     list-style: none;       //tira os bullet
+    font-family: "Roboto", sans-serif;
+
 }
 
 .button {
@@ -55,3 +61,18 @@
         background-color: black;
         height: 60000px;
     }
+
+    
+    @mixin text($fontSize: 16px) {
+    font-size: $fontSize;             //mixin para o "line-height" dos textos ter sempre mais 10px
+    line-height: $fontSize + 10px;
+    color: variaveis.$corTextoPrincipal;
+}
+
+    .text--small {
+    @include text(12px);
+
+    @media (max-width:768px) {
+            @include text(11px)
+        }
+}
